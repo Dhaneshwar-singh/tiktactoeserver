@@ -4,7 +4,7 @@ const http = require("http");
 const mongoose = require("mongoose");
 
 const app = express();
-const port = process.env.PORT || 26082608;
+const port = process.env.PORT || 3000;
 var server = http.createServer(app);
 const Room = require("./models/room");
 var io = require("socket.io")(server);
@@ -12,7 +12,7 @@ var io = require("socket.io")(server);
 // middle ware
 app.use(express.json());
 
-const DB = "mongodb+srv://rivaan:test123@cluster0.rmhtu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const DB = "mongodb+srv://horror:horror@horror.voqqog2.mongodb.net/?retryWrites=true&w=majority";
 
 io.on("connection", (socket) => {
   console.log("connected!");
