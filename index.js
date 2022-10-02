@@ -12,6 +12,7 @@ var io = require("socket.io")(server);
 // middle ware
 app.use(express.json());
 
+// Db connection 
 const DB = "mongodb+srv://horror:horror@horror.voqqog2.mongodb.net/?retryWrites=true&w=majority";
 
 io.on("connection", (socket) => {
